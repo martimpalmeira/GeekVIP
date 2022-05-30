@@ -1,0 +1,53 @@
+<a href="/">Voltar para página inicial</a>
+<hr>
+<h2>Cadastro</h2>
+
+<style>
+    h2 {
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    a {
+        padding-left: 10px;
+    }
+
+    form {
+        border: solid 1px;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 50%;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<div class="container">
+    <form>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" onclick="validateForm()" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        let nome = document.getElementById("nome").value;
+        alert(nome + ' concorda com os termos de uso?')
+    }
+</script>
